@@ -15,7 +15,7 @@ function NavBar() {
     setMenu(!menu);
   };
 
-  const links = ["Home", "Explore", "Travel", "Blog", "Pricing"];
+  const links = ["Home", "Explore", "Travel", "Blog", "Contact"];
 
   return (
     <div className="md:sticky md:top-0 md:shadow-none z-20">
@@ -28,11 +28,12 @@ function NavBar() {
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
             {links.map((link, index) => (
               <div key={index}>
-                <p
+                <Link
+                  href="/"
                   className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-white`}
                 >
                   {link}
-                </p>
+                </Link>
                 {currentIndex === index && (
                   <div className="w-12 h-1 bg-primary"></div>
                 )}
@@ -54,6 +55,7 @@ function NavBar() {
           </div>
         </div>
       </div>
+
       {/* MOBILE */}
       <div
         className={` block lg:hidden  fixed top-0 w-full z-[999] py-4 backdrop-blur-lg backdrop-filter animate-in fade-in zoom-in ${
@@ -87,11 +89,12 @@ function NavBar() {
             <div className="flex flex-col gap-8 mt-8 mx-4">
               {links.map((link, index) => (
                 <div key={index}>
-                  <p
-                    className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-white`}
+                  <Link
+                    href="/"
+                    className={`hover:text-white cursor-pointer flex items-center gap-2  font-[500] text-white`}
                   >
                     {link}
-                  </p>
+                  </Link>
                   {currentIndex === index && (
                     <div className="w-12 h-1 bg-primary"></div>
                   )}
@@ -101,14 +104,14 @@ function NavBar() {
               <div className="flex flex-col gap-[40px] select-none">
                 <Link
                   href="/auth/login"
-                  className="hover:text-primary text-white cursor-pointer flex items-center gap-2 "
+                  className="hover:text-secondary underline underline-offset-4 text-white cursor-pointer flex items-center gap-2 "
                 >
                   Login
                 </Link>
 
                 <MainButton
                   text="Signup"
-                  classes="bg-[#B63E22] rounded-[12px] w-[134px]"
+                  classes="bg-[#dce1aa] text-primary rounded-[12px] w-[134px] hover:bg-[#dce1aa] hover:text-primary"
                 />
               </div>
             </div>

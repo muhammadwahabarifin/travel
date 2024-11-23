@@ -25,7 +25,11 @@ function FooterSection() {
     <section className="bg-[#15291c] text-white pb-[140px] px-4 xl:px-[182px] flex flex-col gap-8 md:flex-row justify-between pt-[240px]">
       <div>
         <div>
-          <img src="/images/footer_logo.png" alt="footer logo" />
+          <img
+            src="/images/footer_logo.png"
+            alt="footer logo"
+            // className="fill-yellow-400"
+          />
         </div>
       </div>
       <div>
@@ -57,7 +61,9 @@ function FooterSection() {
         </div>
       </div>
       <div>
-        <p className="font-medium text-[24px] mb-2">Follow us on</p>
+        <p className="font-medium text-[24px] mb-2 text-yellow-300">
+          Follow us on
+        </p>
         <div className="flex gap-3 items-center">
           {socials.map((item, index) => (
             <div key={index}>

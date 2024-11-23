@@ -43,7 +43,7 @@ function BlogSection() {
 
           <div className="text-primary flex items-center gap-3">
             Read More
-            <ArrowRight color="#FF7757" />
+            <ArrowRight className="text-primary" />
           </div>
         </div>
       </div>
